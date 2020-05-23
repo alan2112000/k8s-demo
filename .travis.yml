@@ -17,3 +17,10 @@ before_install:
 script:
   - docker run alan21120000/react-test npm test -- --coverage
 
+deploy:
+  provider: script
+  script: base ./deploy.sh
+  on:
+    branch: master
+
+
